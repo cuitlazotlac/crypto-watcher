@@ -49,7 +49,6 @@ export const Toggle = ({ theme, toggleTheme }) => {
           />
         </Sun>
       )}
-      <h1>Toggle</h1>
     </div>
   );
 };
