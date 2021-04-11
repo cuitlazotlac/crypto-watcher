@@ -57,6 +57,31 @@ export const GlobalStyles = createGlobalStyle`
 .coin-input::placeholder {
   color: #e2e2e2;
 }
+
+header[role="banner"] {
+    #logo-main {
+      display: block;
+      margin: 20px auto;
+    }
+  }
+  
+  #navbar-primary.navbar-default {
+    background: transparent;
+    border: none;
+    .navbar-nav { 
+      width: 100%;
+      text-align: center;
+      > li {
+        display: inline-block;
+        float: none;
+        > a {
+          padding-left: 30px;
+          padding-right: 30px;
+          }
+      }
+    }
+  }
+
 `;
 
 export const ligthTheme = {

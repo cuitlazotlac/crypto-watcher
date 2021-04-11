@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 // import "./App.css";
 
 import axios from "axios";
-import Coin from "./Coin";
+// import Coin from "./Coin";
+import Coin from "./components/coin/Coin"
+import { NavBar } from "./components/NavBar";
 
-import { GlobalStyles, ligthTheme, darkTheme } from './styles/globalStyles';
-import { Toggle } from "./components/Toggle"
+import { GlobalStyles, ligthTheme, darkTheme } from "./ressources/styles/globalStyles";
+import { Toggle } from "./components/Toggle";
 import styled, { ThemeProvider } from "styled-components";
-import { useDarkMode } from "./styles/useDarkMode";
+import { useDarkMode } from "./ressources/styles/useDarkMode";
 
 const Container = styled.div`
   background: red;
@@ -16,8 +18,8 @@ const Container = styled.div`
 function App() {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
-  const [ theme, toggleTheme ] = useDarkMode();
-  const themeMode = theme === 'light' ? ligthTheme : darkTheme
+  const [theme, toggleTheme] = useDarkMode();
+  const themeMode = theme === "light" ? ligthTheme : darkTheme;
 
   useEffect(() => {
     axios
@@ -40,37 +42,38 @@ function App() {
 
   return (
     <ThemeProvider theme={themeMode}>
-    <Container>
-      <GlobalStyles />
-      <Toggle theme={theme} toggleTheme={toggleTheme}/>
-      <div className="coin-app">
-        <div className="coin-search">
-          <h1 className="coin-text">Search a currency</h1>
-          <form>
-            <input
-              type="text"
-              placeholder="Search"
-              className="coin-input"
-              onChange={handleChange}
-            />
-          </form>
+      <Container>
+        <NavBar />
+        <GlobalStyles />
+        <Toggle theme={theme} toggleTheme={toggleTheme} />
+        <div className="coin-app">
+          <div className="coin-search">
+            <h1 className="coin-text">Search a currency</h1>
+            <form>
+              <input
+                type="text"
+                placeholder="Search"
+                className="coin-input"
+                onChange={handleChange}
+              />
+            </form>
+          </div>
+          {filteredCoins.map((coin) => {
+            return (
+              <Coin
+                key={coin.id}
+                name={coin.name}
+                image={coin.image}
+                symbol={coin.symbol}
+                marketcap={coin.market_cap}
+                price={coin.current_price}
+                priceChange={coin.price_change_percentage_24h}
+                volume={coin.total_volume}
+              />
+            );
+          })}
         </div>
-        {filteredCoins.map((coin) => {
-          return (
-            <Coin
-              key={coin.id}
-              name={coin.name}
-              image={coin.image}
-              symbol={coin.symbol}
-              marketcap={coin.market_cap}
-              price={coin.current_price}
-              priceChange={coin.price_change_percentage_24h}
-              volume={coin.total_volume}
-            />
-          );
-        })}
-      </div>
-    </Container>
+      </Container>
     </ThemeProvider>
   );
 }
