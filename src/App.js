@@ -3,23 +3,29 @@ import React, { useState, useEffect } from "react";
 
 import axios from "axios";
 // import Coin from "./Coin";
-import Coin from "./components/coin/Coin"
+import Coin from "./components/coin/Coin";
 import { NavBar } from "./components/NavBar";
 
-import { GlobalStyles, ligthTheme, darkTheme } from "./ressources/styles/globalStyles";
+import {
+  GlobalStyles,
+  ligthTheme,
+  darkTheme,
+} from "./ressources/styles/globalStyles";
 import { Toggle } from "./components/Toggle";
 import styled, { ThemeProvider } from "styled-components";
 import { useDarkMode } from "./ressources/styles/useDarkMode";
 
 const Container = styled.div`
-  background: red;
+  max-width: 50%;
+  margin: 8rem auto 0;
 `;
 
 function App() {
-  const [coins, setCoins] = useState([]);
-  const [search, setSearch] = useState("");
   const [theme, toggleTheme] = useDarkMode();
   const themeMode = theme === "light" ? ligthTheme : darkTheme;
+
+  const [coins, setCoins] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     axios
@@ -48,14 +54,15 @@ function App() {
         <Toggle theme={theme} toggleTheme={toggleTheme} />
         <div className="coin-app">
           <div className="coin-search">
-            <h1 className="coin-text">Search a currency</h1>
             <form>
-              <input
-                type="text"
-                placeholder="Search"
-                className="coin-input"
-                onChange={handleChange}
-              />
+              <label>
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="coin-input"
+                  onChange={handleChange}
+                />
+              </label>
             </form>
           </div>
           {filteredCoins.map((coin) => {

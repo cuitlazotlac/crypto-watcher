@@ -6,15 +6,22 @@ export const GlobalStyles = createGlobalStyle`
         text: ${({ theme }) => theme.text};
         transition: all .5s linear;
     }
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #1a1a1c;
-  color: #fff;
+  font-family: 'Rajdhani',sans-serif;
+  background-color: ${({ theme }) => theme.body};
+  color: ${({ theme }) => theme.text};
+  transition: all .5s linear;
+}
+
+.app-title {
+  margin-bottom: 32px;
+  text-align: center;
 }
 
 .coin-app {
@@ -25,21 +32,34 @@ export const GlobalStyles = createGlobalStyle`
   color: #fff;
 }
 
+label {
+  position: relative;
+}
+
+label:before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25' fill-rule='evenodd'%3E%3Cpath d='M16.036 18.455l2.404-2.405 5.586 5.587-2.404 2.404zM8.5 2C12.1 2 15 4.9 15 8.5S12.1 15 8.5 15 2 12.1 2 8.5 4.9 2 8.5 2zm0-2C3.8 0 0 3.8 0 8.5S3.8 17 8.5 17 17 13.2 17 8.5 13.2 0 8.5 0zM15 16a1 1 0 1 1 2 0 1 1 0 1 1-2 0'%3E%3C/path%3E%3C/svg%3E") center / contain no-repeat;
+}
+
 .coin-search {
+  position: absolute;
+  top: 2rem;
+  right: 10rem;
   margin-bottom: 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-}
-
-.coin-text {
-  margin-bottom: 32px;
-  text-align: center;
+  background-color: blue;
 }
 
 .coin-input {
-  padding-left: 16px;
+  padding: 10px 40px;
   width: 300px;
   height: 50px;
   border-radius: 4px;
@@ -50,7 +70,6 @@ export const GlobalStyles = createGlobalStyle`
     #7918f2 48%,
     #4801ff 100%
   );
-
   color: #e2e2e2;
 }
 
@@ -90,6 +109,6 @@ export const ligthTheme = {
 };
 
 export const darkTheme = {
-  body: "#121212",
+  body: "#1E2028",
   text: "#fff",
 };
