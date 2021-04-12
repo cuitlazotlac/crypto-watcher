@@ -1,11 +1,11 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
-    body {
-        background: ${({ theme }) => theme.body};
-        text: ${({ theme }) => theme.text};
-        transition: all .5s linear;
-    }
+    // body {
+    //     background: ${({ theme }) => theme.body};
+    //     text: ${({ theme }) => theme.text};
+    //     transition: all .5s linear;
+    // }
     @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 
@@ -36,6 +36,10 @@ label {
   position: relative;
 }
 
+toggle{
+  width: 23px;
+  height: 23px;
+}
 label:before {
   content: "";
   position: absolute;
@@ -61,16 +65,18 @@ label:before {
 .coin-input {
   padding: 10px 40px;
   width: 300px;
-  height: 50px;
+  height: 40px;
   border-radius: 4px;
   border: none;
   background-image: linear-gradient(
     -225deg,
-    #ac32e4 0%,
-    #7918f2 48%,
-    #4801ff 100%
+    ${({ theme }) => theme.searchBar_color} 0%,
+    ${({ theme }) => theme.searchBar_color} 48%,
+    ${({ theme }) => theme.searchBar_color} 100%
   );
+  color: ${({ theme }) => theme.searchBar_text};
   color: #e2e2e2;
+
 }
 
 .coin-input::placeholder {
@@ -104,11 +110,15 @@ header[role="banner"] {
 `;
 
 export const ligthTheme = {
-  body: "#fff",
+  body: "#EEF3FF",
   text: "#121212",
+  searchBar_color: "#F0F2F5",
+  searchBar_text: "#F0F2F5",
 };
 
 export const darkTheme = {
-  body: "#1E2028",
+  body: "#1C1E24",
   text: "#fff",
+  searchBar_color: "#222631",
+  searchBar_text: "#A6B1C2",
 };

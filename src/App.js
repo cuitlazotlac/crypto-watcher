@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 // import "./App.css";
 
 import axios from "axios";
-// import Coin from "./Coin";
 import Coin from "./components/coin/Coin";
 import { NavBar } from "./components/NavBar";
 
@@ -51,7 +50,7 @@ function App() {
       <Container>
         <NavBar />
         <GlobalStyles />
-        <Toggle theme={theme} toggleTheme={toggleTheme} />
+        <Toggle className="toggle" theme={theme} toggleTheme={toggleTheme} />
         <div className="coin-app">
           <div className="coin-search">
             <form>
@@ -75,7 +74,10 @@ function App() {
                 marketcap={coin.market_cap}
                 price={coin.current_price}
                 priceChange={coin.price_change_percentage_24h}
+                marketCapRank={coin.market_cap_rank}
                 volume={coin.total_volume}
+                circulating_supply={coin.circulating_supply}
+                total_supply={coin.total_supply}
               />
             );
           })}
