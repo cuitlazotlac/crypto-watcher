@@ -37,7 +37,7 @@ const Coin = ({
           </p>
           <ProgressBar
             striped
-            variant="success"
+            variant="info"
             className="markcap-progress"
             now={circulating_supply}
             max={total_supply}

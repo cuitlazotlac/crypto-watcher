@@ -97,9 +97,9 @@
   transform: scale(0.75);
 }
 
-.markcap-progress bg-success progress-bar-striped{
-  background-color: #AFB5C6;
-  background-color: white
+.progress-bar bg-info progress-bar-striped{
+    background-color: violet;
 }
+
 
 
