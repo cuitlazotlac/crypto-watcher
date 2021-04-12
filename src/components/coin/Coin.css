@@ -8,7 +8,9 @@
   flex-direction: row;
   justify-content: start;
   align-items: center;
+  font-size: 13.5px;
   height: 80px;
+  width: 85%;
   border: 2px solid black;
   border-radius: 5px;
   margin-top: 1rem;
@@ -27,12 +29,17 @@
   align-items: center;
   padding-right: 24px;
   padding-left: 15px;
-  min-width: 300px;
+  min-width: 250px;
 }
 
 .coin h1 {
   font-size: 16px;
   padding-right: 10px;
+}
+
+.coin-marketCap{
+  padding-right: 9px;
+  font-weight: bold;
 }
 
 .coin img {
@@ -49,26 +56,21 @@
   display: flex;
   text-align: right;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
 .coin-price {
-  margin-left: -50px;
-  width: 110px;
   font-weight: bold;
 }
 
-.coin-chg24h{
-
-}
-
 .coin-volume {
-  width: 155px;
+  width: 135px;
 }
 
 .coin-marketcap {
-  width: 230px;
-  padding-right: 15px;
+  /* width: 230px; */
+  /* padding-right: 15px; */
 }
 
 .coin-percent {
@@ -85,3 +87,19 @@
   color: #11d811;
   font-weight: bold;
 }
+
+.markcap-progress{
+  width: 230px;
+  height: 14px;
+  padding-right: 9px;
+  background-color: #232530;
+  border-radius: 16px;
+  transform: scale(0.75);
+}
+
+.markcap-progress bg-success progress-bar-striped{
+  background-color: #AFB5C6;
+  background-color: white
+}
+
+
