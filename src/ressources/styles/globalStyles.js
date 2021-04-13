@@ -40,6 +40,7 @@ toggle{
   width: 23px;
   height: 23px;
 }
+
 label:before {
   content: "";
   position: absolute;
@@ -75,12 +76,17 @@ label:before {
     ${({ theme }) => theme.searchBar_color} 100%
   );
   color: ${({ theme }) => theme.searchBar_text};
-  color: #e2e2e2;
-
 }
 
 .coin-input::placeholder {
   color: #e2e2e2;
+}
+
+.logo {
+  fill: ${({ theme }) => theme.text};
+}
+.logo:hover {
+  fill: orange;
 }
 
 header[role="banner"] {
@@ -112,13 +118,13 @@ header[role="banner"] {
 export const ligthTheme = {
   body: "#EEF3FF",
   text: "#121212",
-  searchBar_color: "#F0F2F5",
-  searchBar_text: "#F0F2F5",
+  searchBar_color: "#D1D5DA",
+  searchBar_text: "#121212",
 };
 
 export const darkTheme = {
-  body: "#1C1E24",
-  text: "#fff",
+  body: "#0D1117",
+  text: "#ACB4BB",
   searchBar_color: "#222631",
   searchBar_text: "#A6B1C2",
 };

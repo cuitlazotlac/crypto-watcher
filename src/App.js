@@ -14,6 +14,7 @@ import { Toggle } from "./components/Toggle";
 import styled, { ThemeProvider } from "styled-components";
 import { useDarkMode } from "./ressources/styles/useDarkMode";
 
+
 const Container = styled.div`
   max-width: 50%;
   margin: 8rem auto 0;
