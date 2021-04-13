@@ -4,16 +4,16 @@
 }
 
 .coin-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: start; */
   align-items: center;
   font-size: 13.5px;
   height: 80px;
-  width: 85%;
-  border: 2px solid black;
-  border-radius: 5px;
-  margin-top: 1rem;
+  /* width: 85%; */
+  /* border: 2px solid black; */
+  /* border-radius: 5px; */
+  /* margin-top: 1rem; */
 }
 
 .coin-row:hover{
@@ -35,14 +35,17 @@
 .coin h1 {
   font-size: 16px;
   padding-right: 10px;
+  text-align: left;
 }
 
 .coin-marketCap{
   padding-right: 9px;
   font-weight: bold;
+  text-align: left;
+
 }
 
-.coin img {
+.coin-img {
   height: 30px;
   width: 30px;
   margin-right: 10px;
@@ -69,8 +72,8 @@
 }
 
 .coin-marketcap {
-  /* width: 230px; */
-  /* padding-right: 15px; */
+  width: 230px;
+  padding-right: 15px;
 }
 
 .coin-percent {
@@ -101,5 +104,43 @@
     background-color: violet;
 }
 
+/* ------  */
 
+.crypto-row{
+  display: block;
+  font-size: 13.5px;
+  /* width: 800px; */
+  height: 80px;
+  border-radius: 5px;
+  /* margin-top: 1rem; */
+}
 
+.crypto-row:hover{
+  transform: scale(1.1);
+  transform: translate(7px, -7px);
+  transform-style: preserve-3d;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 5px 10px #888888;
+}
+
+.crypto-marketcap{
+  text-align: left;
+}
+
+.crypto-img{
+  height: 30px;
+  width: 30px;
+}
+
+.crypto-name{
+  text-align: left;
+}
+
+.crypto-symbol {
+  text-transform: uppercase;
+}
+
+.crypto-price {
+  text-align: left;
+  font-weight: bold;
+}
