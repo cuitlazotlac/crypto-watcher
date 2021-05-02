@@ -17,7 +17,7 @@ const Coin = ({
   total_supply,
 }) => {
   return (
-    <Table className="tables-crypto">
+    <Table>
       <tbody>
         <tr className="crypto-row">
           <td className="crypto-marketcap">{marketCapRank}</td>
