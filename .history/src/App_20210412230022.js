@@ -65,7 +65,6 @@ function App() {
               </label>
             </form>
           </div>
-          <h2>Here</h2>
           {filteredCoins.map((coin) => {
             return (
               <Coin

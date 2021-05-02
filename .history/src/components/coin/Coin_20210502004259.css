@@ -7,6 +7,10 @@
   align-items: center;
   font-size: 15px;
   height: 80px;
+  width: 85%;
+  /* border: 2px solid black; */
+  /* border-radius: 5px; */
+  /* margin-top: 1rem; */
 }
 
 .coin-row:hover{
@@ -136,8 +140,4 @@
 .crypto-price {
   text-align: left;
   font-weight: bold;
-}
-
-.tables-crypto{
-  width: 20px;
 }
