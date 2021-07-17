@@ -9,7 +9,7 @@
   height: 80px;
 }
 
-.coin-row:hover{
+.coin-row:hover {
   transform: scale(1.1);
   transform: translate(7px, -7px);
   transform-style: preserve-3d;
@@ -31,11 +31,10 @@
   text-align: left;
 }
 
-.coin-marketCap{
+.coin-marketCap {
   padding-right: 9px;
   font-weight: bold;
   text-align: left;
-
 }
 
 .coin-img {
@@ -84,7 +83,7 @@
   font-weight: bold;
 }
 
-.markcap-progress{
+.markcap-progress {
   width: 230px;
   height: 14px;
   padding-right: 9px;
@@ -93,13 +92,13 @@
   transform: scale(0.75);
 }
 
-.progress-bar bg-info progress-bar-striped{
-    background-color: violet;
+.progress-bar bg-info progress-bar-striped {
+  background-color: violet;
 }
 
 /* ------  */
 
-.crypto-row{
+.crypto-row {
   display: block;
   font-size: 17px;
   /* width: 800px; */
@@ -108,7 +107,7 @@
   /* margin-top: 1rem; */
 }
 
-.crypto-row:hover{
+.crypto-row:hover {
   transform: scale(1.1);
   transform: translate(7px, -7px);
   transform-style: preserve-3d;
@@ -116,16 +115,16 @@
   box-shadow: 5px 10px #888888;
 }
 
-.crypto-marketcap{
+.crypto-marketcap {
   text-align: left;
 }
 
-.crypto-img{
+.crypto-img {
   height: 30px;
   width: 30px;
 }
 
-.crypto-name{
+.crypto-name {
   text-align: left;
 }
 
@@ -138,6 +137,6 @@
   font-weight: bold;
 }
 
-.tables-crypto{
+.tables-crypto {
   width: 20px;
 }

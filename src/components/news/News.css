@@ -1,0 +1,20 @@
+.articles article {
+  padding: 30px 15px;
+  background-color: #fff;
+}
+
+.articles article a {
+  text-decoration: none;
+}
+
+.articles article h3 {
+  color: #212121;
+}
+
+.articles article:nth-child(2n) {
+  background-color: #f3f3f3;
+}
+
+.articles article:hover {
+  background-image: linear-gradient(to right, #fe4880, #ffce00);
+}
