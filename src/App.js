@@ -14,6 +14,7 @@ import { Toggle } from "./components/Toggle";
 import styled, { ThemeProvider } from "styled-components";
 import { useDarkMode } from "./ressources/styles/useDarkMode";
 
+import News from "./components/news/News";
 
 const Container = styled.div`
   max-width: 50%;
@@ -52,6 +53,7 @@ function App() {
         <NavBar />
         <GlobalStyles />
         <Toggle className="toggle" theme={theme} toggleTheme={toggleTheme} />
+        <News />
         <div className="coin-app">
           <div className="coin-search">
             <form>
