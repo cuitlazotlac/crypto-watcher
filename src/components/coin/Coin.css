@@ -1,86 +1,85 @@
-.coin-container {
+.coin_container {
   display: flex;
   justify-content: center;
 }
 
-.coin-row {
+.coin_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  font-size: 15px;
   height: 80px;
+  border-bottom: 0.5px solid #88888825;
+  width: 1105px;
+  padding: 0rem 2rem;
 }
 
-.coin-row:hover {
+.coin_row:hover {
   transform: scale(1.1);
-  transform: translate(7px, -7px);
+  transform: translate(4px, -4px);
   transform-style: preserve-3d;
   transition: all 0.2s ease-in-out;
-  box-shadow: 5px 10px #888888;
+  /* box-shadow: 5px 10px #888888; */
 }
+
 
 .coin {
   display: flex;
   align-items: center;
   padding-right: 24px;
-  padding-left: 15px;
-  min-width: 250px;
 }
 
-.coin h1 {
-  font-size: 16px;
-  padding-right: 10px;
-  text-align: left;
-}
-
-.coin-marketCap {
-  padding-right: 9px;
-  font-weight: bold;
-  text-align: left;
-}
-
-.coin-img {
+.coin_img {
   height: 30px;
   width: 30px;
   margin-right: 10px;
 }
 
-.coin-symbol {
+.coin_cap {
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+  font-weight: 900;
+}
+
+.coin_h1 {
+  font-size: 16px;
+  width: 150px;
+}
+
+.coin_symbol {
   text-transform: uppercase;
 }
 
-.coin-data {
+.coin_data {
   display: flex;
   text-align: right;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
 }
 
-.coin-price {
-  font-weight: bold;
+.coin_price {
+  width: 110px;
 }
 
-.coin-volume {
-  width: 135px;
+.coin_volume {
+  width: 155px;
 }
 
-.coin-marketcap {
+.coin_marketcap {
   width: 230px;
-  padding-right: 15px;
 }
 
-.coin-percent {
+.coin_percent {
   width: 100px;
-  padding-right: 15px;
 }
 
 .red {
   color: #f00606;
-  font-weight: bold;
 }
 
 .green {
-  color: #11d811;
-  font-weight: bold;
+  color: #13c783;
 }
 
 .markcap-progress {
@@ -90,53 +89,4 @@
   background-color: #232530;
   border-radius: 16px;
   transform: scale(0.75);
-}
-
-.progress-bar bg-info progress-bar-striped {
-  background-color: violet;
-}
-
-/* ------  */
-
-.crypto-row {
-  display: block;
-  font-size: 17px;
-  /* width: 800px; */
-  height: 80px;
-  border-radius: 5px;
-  /* margin-top: 1rem; */
-}
-
-.crypto-row:hover {
-  transform: scale(1.1);
-  transform: translate(7px, -7px);
-  transform-style: preserve-3d;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 5px 10px #888888;
-}
-
-.crypto-marketcap {
-  text-align: left;
-}
-
-.crypto-img {
-  height: 30px;
-  width: 30px;
-}
-
-.crypto-name {
-  text-align: left;
-}
-
-.crypto-symbol {
-  text-transform: uppercase;
-}
-
-.crypto-price {
-  text-align: left;
-  font-weight: bold;
-}
-
-.tables-crypto {
-  width: 20px;
 }

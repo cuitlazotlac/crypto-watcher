@@ -17,24 +17,28 @@ const Coin = ({
   total_supply,
 }) => {
   return (
-    <Table className="tables-crypto">
-      <tbody>
-        <tr className="crypto-row">
-          <td className="crypto-marketcap">{marketCapRank}</td>
-          <td>
-            <img className="crypto-img" src={image} alt="crypto" />
-          </td>
-          <td className="crypto-name">{name}</td>
-          <td className="crypto-symbol">{symbol}</td>
-          <td className="crypto-price">${price}</td>
-          <td className="coin-volume">${volume.toLocaleString()}</td>
+    <div className="coin_container">
+      <div className="coin_row">
+        <div className="coin">
+          <p className="coin_cap">{marketCapRank}</p>
+          <img src={image} alt={name} className="coin_img" />
+          <h1 className="coin_h1"> {name}</h1>
+          <p className="coin_symbol">{symbol}</p>
+        </div>
+        <div className="coin_data">
+          <p className="coin_price">${price}</p>
+          <p className="coin_volume">${volume.toLocaleString()}</p>
+
           {priceChange < 0 ? (
-            <td className="coin-percent red">{priceChange.toFixed(2)}%</td>
+            <p className="coin_percent red">{priceChange.toFixed(2)}%</p>
           ) : (
-            <td className="coin-percent green">{priceChange.toFixed(2)}%</td>
+            <p className="coin_percent grend">{priceChange.toFixed(2)}%</p>
           )}
-          <td className="coin-marketcap">${marketcap.toLocaleString()}</td>
-          <td>
+
+          <p className="coin_marketcap">
+            Mkt Cap: ${marketcap.toLocaleString()}
+          </p>
+          <p>
             <ProgressBar
               animated
               striped
@@ -43,10 +47,10 @@ const Coin = ({
               now={circulating_supply}
               max={total_supply}
             />
-          </td>
-        </tr>
-      </tbody>
-    </Table>
+          </p>
+        </div>
+      </div>
+    </div>
   );
 };
 
