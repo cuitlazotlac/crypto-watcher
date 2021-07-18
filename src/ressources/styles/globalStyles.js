@@ -121,12 +121,12 @@ export const ligthTheme = {
   body: "#EEF3FF",
   text: "#121212",
   searchBar_color: "#D1D5DA",
-  searchBar_text: "#121212",
+  searchBar_text: "#FFFFFF",
 };
 
 export const darkTheme = {
-  body: "#0D1117",
+  body: "#162955",
   text: "#ACB4BB",
-  searchBar_color: "#222631",
+  searchBar_color: "#ACB4BB",
   searchBar_text: "#A6B1C2",
 };

@@ -3,7 +3,7 @@ import Article from "./Article";
 
 function News() {
   const [articles, setArticles] = useState([]);
-  const [subreddit, setSubreddit] = useState("Crypto");
+  const [subreddit, setSubreddit] = useState("Cryptocurrency");
 
   useEffect(() => {
     fetch("https://www.reddit.com/r/" + subreddit + ".json").then((res) => {
@@ -23,6 +23,7 @@ function News() {
 
   return (
     <div>
+      <div className="title">News (from Reddit r/Cryptocurrency)</div>
       <div className="articles">
         <tr>
           {articles != null
