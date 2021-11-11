@@ -23,7 +23,7 @@ function News() {
 
   return (
     <div>
-      <div className="title">News (from Reddit r/Cryptocurrency)</div>
+      <div className="title">News Feed (from Reddit r/Cryptocurrency)</div>
       <div className="articles">
         <tr>
           {articles != null
