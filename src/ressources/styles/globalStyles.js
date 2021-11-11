@@ -17,10 +17,11 @@ export const GlobalStyles = createGlobalStyle`
   background-color: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.text};
   transition: all .5s linear;
+  font-size: 19px;
 }
 
 .app-title {
-  font-size: 46px;
+  font-size: 60px;
   font-weight: bold;
   margin-bottom: 32px;
   text-align: center;

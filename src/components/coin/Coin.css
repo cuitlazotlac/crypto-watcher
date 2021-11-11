@@ -40,11 +40,13 @@
   align-items: center;
   padding-right: 24px;
   font-weight: 900;
+  /* font-weight: bold; */
 }
 
 .coin_h1 {
-  font-size: 16px;
+  font-size: 19px;
   width: 150px;
+  font-weight: 900;
 }
 
 .coin_symbol {
