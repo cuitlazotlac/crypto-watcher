@@ -32,7 +32,7 @@
 }
 
 .articles article p {
-  color: #fe4880;
+  /* color: #fe4880; */
   word-wrap: break-word;
   padding: 70px 5px 5px 5px;
 }
